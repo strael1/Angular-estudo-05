@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <!-- forms.component -->
+    <app-form-server
+      (serverCreated)="addNewServer($event)"
+    ></app-form-server>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <!-- serve.component -->
+      <app-server-element 
+      *ngFor="let serverElement of serverElements"
+      [server]="serverElement"></app-server-element>
+    </div>
+  </div>
+</div>
